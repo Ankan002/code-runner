@@ -10,7 +10,7 @@ const CustomHead = (props: Props) => {
         <Head>
             <title>{props.title}</title>
             <meta name="description" content="A single chrome extension to text out your code snippets" />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/icon-150.png" />
         </Head>
     );
 };
