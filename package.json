@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && npm run prepare",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "mv out/_next out/assets && sed -i 's/\\/_next/\\/assets/g' out/**.html"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "12.2.5",
