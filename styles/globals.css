@@ -1,26 +1,33 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+    border-radius: 100vh;
+    height: 100%;
 }
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FC5A31;
+    border-radius: 100vh;
+    border: 1px solid #08070C;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FC5A31;
 }

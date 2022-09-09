@@ -4,21 +4,31 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export && npm run prepare",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "mv out/_next out/assets && sed -i 's/\\/_next/\\/assets/g' out/**.html"
   },
   "dependencies": {
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-ace": "^10.1.0",
+    "react-dom": "18.2.0",
+    "react-dropdown": "^1.10.0",
+    "react-hot-toast": "^2.3.0",
+    "react-icons": "^4.4.0",
+    "react-select": "^5.4.0",
+    "recoil": "^0.7.5"
   },
   "devDependencies": {
     "@types/node": "18.7.15",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
     "typescript": "4.8.2"
   }
 }

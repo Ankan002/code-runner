@@ -1,0 +1,1 @@
+export { default as OutputConsole } from "./output-console";
