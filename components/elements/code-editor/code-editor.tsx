@@ -26,7 +26,9 @@ const Ace = dynamic(
     },
     {
         loading: () => (
-            <></>
+            <div className="w-full h-[55vh] flex items-center justify-center text-primaryDark text-lg">
+                Loading...
+            </div>
         ),
         ssr: false
     }
