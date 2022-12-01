@@ -1,4 +1,4 @@
-import React, {ChangeEvent, ChangeEventHandler} from 'react';
+import React, {ChangeEventHandler} from 'react';
 
 interface Props {
     title: string;

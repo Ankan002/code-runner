@@ -2,7 +2,7 @@ import React from 'react';
 import Dropdown, {Option} from "react-dropdown";
 import 'react-dropdown/style.css';
 import {editorThemes} from "constants/editor-themes";
-import {useRecoilState, useRecoilValue} from "recoil";
+import {useRecoilState, useRecoilValue, useSetRecoilState} from "recoil";
 import {editorThemeAtom, editorLanguageAtom, codeAtom, compilingAtom, stdInputAtom, consoleOutputAtom} from "atoms";
 import {EditorTheme} from "types/editor-theme";
 import {editorLanguages} from "constants/editor-languages";
@@ -16,7 +16,7 @@ const Header = () => {
     const [editorTheme, setEditorTheme] = useRecoilState<EditorTheme>(editorThemeAtom);
     const [editorLanguage, setEditorLanguage] = useRecoilState<EditorLanguage>(editorLanguageAtom);
     const [compiling, setCompiling] = useRecoilState<boolean>(compilingAtom);
-    const [consoleOutput, setConsoleOutput] = useRecoilState<string>(consoleOutputAtom);
+    const setConsoleOutput = useSetRecoilState<string>(consoleOutputAtom);
 
     const code = useRecoilValue<string>(codeAtom);
     const stdInput = useRecoilValue<string>(stdInputAtom);
@@ -69,7 +69,7 @@ const Header = () => {
     }
 
     return (
-        <div className="w-full px-5 py-2 flex sm:flex-row flex-col sm:items-center sm:justify-between">
+        <nav className="w-full px-5 py-2 flex sm:flex-row flex-col sm:items-center sm:justify-between">
             <div className="flex-1 flex items-center sm:mb-0 mb-2 sm:justify-start justify-between">
                 <Dropdown options={editorThemes} value={editorTheme.Theme} placeholder={editorTheme.ThemeName} onChange={EditorThemeOptionChange} className="mr-5" controlClassName="w-full font-fira-code" menuClassName="font-fira-code"  />
 
@@ -77,7 +77,7 @@ const Header = () => {
             </div>
 
             <div className="sm:w-40 w-full flex justify-end">
-                <button className="w-12 p-2 border-2 border-black rounded-md flex justify-center items-center bg-primaryYellow" onClick={onCompileCodeClick}>
+                <button className="w-12 p-2 border-2 border-black rounded-md flex justify-center items-center bg-primaryYellow" onClick={onCompileCodeClick} type="button" aria-label="Run the Code.">
                     {
                         compiling ? (
                             <BsFillPauseFill size={25} />
@@ -87,7 +87,7 @@ const Header = () => {
                     }
                 </button>
             </div>
-        </div>
+        </nav>
     );
 };
 
