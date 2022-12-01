@@ -1,4 +1,4 @@
-type APILanguage = "js" | "java" | "py" | "c" | "cpp" | "cs" | "go";
+type APILanguage = "js" | "java" | "py" | "c" | "cpp" | "cs" | "go" | "rs" | "kt" | "ts";
 
 export const compileCode = async(code: string, language: APILanguage, standardInput: string) => {
     if(code.length < 1) return;
@@ -11,7 +11,7 @@ export const compileCode = async(code: string, language: APILanguage, standardIn
             body: JSON.stringify({
                 code,
                 language,
-                input: standardInput
+                stdInput: standardInput
             })
         });
 

@@ -1,13 +1,7 @@
-import {GroupBase} from "react-select";
-
 export const editorThemes = [
     {
         label: "Dracula",
         value: "dracula",
-    },
-    {
-        label: "Github",
-        value: "github"
     },
     {
         label: "Twilight",
@@ -18,7 +12,23 @@ export const editorThemes = [
         value: "terminal"
     },
     {
-        label: "Nord Dark",
-        value: "nord_dark"
+        label: "One Dark",
+        value: "one_dark"
+    },
+    {
+        label: "Monokai",
+        value: "monokai"
+    },
+    {
+        label: "Eclipse",
+        value: "eclipse"
+    },
+    {
+        label: "Xcode",
+        value: "xcode"
+    },
+    {
+        label: "Github",
+        value: "github"
     }
 ];

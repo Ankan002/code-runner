@@ -54,5 +54,26 @@ export const editorLanguages: Array<EditorLanguageOptions> = [
         APILanguage: "cs",
         label: "C#",
         value: "csharp"
+    },
+    {
+        LanguageName: "Rust",
+        EditorLanguage: "rust",
+        APILanguage: "rs",
+        label: "Rust",
+        value: "rust"
+    },
+    {
+        LanguageName: "Kotlin",
+        EditorLanguage: "kotlin",
+        APILanguage: "kt",
+        label: "Kotlin",
+        value: "kotlin"
+    },
+    {
+        LanguageName: "Typescript",
+        EditorLanguage: "typescript",
+        APILanguage: "ts",
+        label: "Typescript",
+        value: "typescript"
     }
 ];
