@@ -1,6 +1,6 @@
 # Code Runner
 
-<img src="https://github.com/Ankan002/code-runner/blob/main/screenshots/screenshot.png">
+<img src="https://github.com/Ankan002/compiler-api/blob/main/assets/images/readme-logo.png">
 
 A website where you can run any of your code snippets with environment just like Leetcode or Hackerank.
 
@@ -15,14 +15,25 @@ Live Website: [Code Runner](https://code-runner.ankan.tech)
 - C++
 - C#
 - Golang
+- Rust
+- Kotlin
+- Typescript
 
 ### Themes Included
 
-- Dracula (Default)
-- Github
-- Twilight
-- Terminal
-- Nord Dark
+- Dark
+
+  - Dracula (Default)
+  - Twilight
+  - Terminal
+  - One Dark
+  - Monokai
+
+- Light
+
+  - Eclipse
+  - Xcode
+  - Github
 
 Suggest more themes in the issues section. Would be happy to include here ✌️✌️✌️...
 
@@ -35,7 +46,7 @@ Suggest more themes in the issues section. Would be happy to include here ✌️
 
 ### Special Thanks
 
-[Jagrav](https://github.com/Jaagrav) for [Codex Code Comipler API](https://github.com/Jaagrav/CodeX-API).
+[Comipler API](https://github.com/Ankan002/compiler-api).
 
 ### Support My Work
 
