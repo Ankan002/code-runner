@@ -8,8 +8,13 @@ interface  Props {
 const OutputConsole = (props: Props) => {
     const { title, output } = props;
     const consoleRef = useRef(null);
+    const isMounted = useRef<boolean>(false);
 
     useEffect(() => {
+        if(!isMounted.current) {
+            isMounted.current = true;
+            return;
+        }
         (consoleRef.current as unknown as any).scrollIntoView({behavior: "smooth"});
     }, [output])
 
