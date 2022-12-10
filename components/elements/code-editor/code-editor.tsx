@@ -35,6 +35,18 @@ const Ace = dynamic(
         require("ace-builds/src-noconflict/theme-monokai");
         require("ace-builds/src-noconflict/theme-eclipse");
         require("ace-builds/src-noconflict/theme-xcode");
+
+        let aceConfig = require("ace-builds/src-min-noconflict/ace");
+        aceConfig.config.set(
+            "basePath",
+            "https://cdn.jsdelivr.net/npm/ace-builds/src-noconflict/"
+        );
+
+        aceConfig.config.setModuleUrl(
+            "ace-builds/src-noconflict/worker-javascript",
+            "https://cdn.jsdelivr.net/npm/ace-builds/src-noconflict/worker-javascript.js"
+        );
+
         return ace.default;
     },
     {
