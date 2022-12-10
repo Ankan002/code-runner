@@ -17,7 +17,8 @@
     "react-hot-toast": "^2.3.0",
     "react-icons": "^4.4.0",
     "react-select": "^5.4.0",
-    "recoil": "^0.7.5"
+    "recoil": "^0.7.5",
+    "unique-names-generator": "^4.7.1"
   },
   "devDependencies": {
     "@types/node": "18.7.15",

@@ -8,8 +8,10 @@ import {EditorTheme} from "types/editor-theme";
 import {editorLanguages} from "constants/editor-languages";
 import {EditorLanguage} from "types/editor-language";
 import {BsFillPlayFill, BsFillPauseFill} from "react-icons/bs";
+import {TbDownload} from "react-icons/tb";
 import {compileCode} from "helpers";
 import toast from "react-hot-toast";
+import {downloadCode} from "helpers/download-code";
 
 const Header = () => {
 
@@ -68,6 +70,11 @@ const Header = () => {
         (response.output.toString().endsWith("\n")) ? setConsoleOutput((prev) => prev + `${response.output}`) : setConsoleOutput((prev) => prev + `${response.output}\n`);
     }
 
+    const onDownloadCodeClick = () => {
+        downloadCode(code, editorLanguage.APILanguage);
+        toast.success("Downloaded Successfully!!");
+    }
+
     return (
         <nav className="w-full px-5 py-2 flex sm:flex-row flex-col sm:items-center sm:justify-between">
             <div className="flex-1 flex items-center sm:mb-0 mb-2 sm:justify-start justify-between">
@@ -77,6 +84,11 @@ const Header = () => {
             </div>
 
             <div className="sm:w-40 w-full flex justify-end">
+                <button className="w-12 p-2 border-2 border-black rounded-md flex justify-center items-center bg-primaryYellow mr-2" onClick={onDownloadCodeClick} type="button" aria-label="Download the Code.">
+                    {
+                        <TbDownload size={25} />
+                    }
+                </button>
                 <button className="w-12 p-2 border-2 border-black rounded-md flex justify-center items-center bg-primaryYellow" onClick={onCompileCodeClick} type="button" aria-label="Run the Code.">
                     {
                         compiling ? (
