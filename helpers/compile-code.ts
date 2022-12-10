@@ -3,7 +3,7 @@ type APILanguage = "js" | "java" | "py" | "c" | "cpp" | "cs" | "go" | "rs" | "kt
 export const compileCode = async(code: string, language: APILanguage, standardInput: string) => {
     if(code.length < 1) return;
     try{
-        const response = await fetch(`${process.env.NEXT_PUBLIC_COMPILE_ENDPOINT}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_COMPILE_ENDPOINT}/compiler`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
