@@ -36,7 +36,7 @@ const Ace = dynamic(
         require("ace-builds/src-noconflict/theme-eclipse");
         require("ace-builds/src-noconflict/theme-xcode");
 
-        let aceConfig = require("ace-builds/src-min-noconflict/ace");
+        const aceConfig = require("ace-builds/src-min-noconflict/ace");
         aceConfig.config.set(
             "basePath",
             "https://cdn.jsdelivr.net/npm/ace-builds/src-noconflict/"
