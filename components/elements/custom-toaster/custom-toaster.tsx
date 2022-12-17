@@ -10,14 +10,14 @@ const CustomToaster = () => {
                         primary: "#08CD92",
                         secondary: "#F1F2F6"
                     },
-                    duration: 1000
+                    duration: 1500
                 },
                 error: {
                     iconTheme: {
                         primary: "#D61C4E",
                         secondary: "#F1F2F6"
                     },
-                    duration: 1000
+                    duration: 1500
                 }
             }}
         >
