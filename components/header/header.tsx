@@ -74,7 +74,13 @@ const Header = () => {
     }
 
     const onDownloadCodeClick = () => {
-        downloadCode(code, editorLanguage.APILanguage);
+        const downloadResponse = downloadCode(code, editorLanguage.APILanguage);
+
+        if(!downloadResponse.success){
+            toast.error(downloadResponse.error ?? "");
+            return;
+        }
+
         toast.success("Downloaded Successfully!!");
     }
 
