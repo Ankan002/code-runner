@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from "next/dynamic";
+import Skeleton from "react-loading-skeleton";
 
 const Ace = dynamic(
     async () => {
@@ -51,8 +52,13 @@ const Ace = dynamic(
     },
     {
         loading: () => (
-            <div className="w-full h-[55vh] flex items-center justify-center text-primaryDark text-lg">
-                Loading...
+            <div className="w-full h-[55vh]">
+                <Skeleton
+                    height={"55vh"}
+                    width={"100%"}
+                    baseColor={"#B5BAC7"}
+                    highlightColor={"#ebebeb"}
+                />
             </div>
         ),
         ssr: false
