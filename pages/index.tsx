@@ -7,7 +7,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <CustomHead title="Code Runner" />
+      <CustomHead title="Compile Me Playground" />
 
       <div className="min-h-screen w-full flex flex-col font-fira-code bg-primaryLight">
           <Header />
