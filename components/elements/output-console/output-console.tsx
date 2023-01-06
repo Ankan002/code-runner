@@ -19,7 +19,7 @@ const OutputConsole = (props: Props) => {
     }, [output])
 
     return (
-        <div className="flex-1 sm:ml-2 py-2 min-h-[250px] max-h-[250px] mt-3 flex flex-col sm:w-1/2 w-full">
+        <div className="flex-1 sm:ml-2 py-2 min-h-[220px] max-h-[220px] mt-3 flex flex-col sm:w-1/2 w-full">
             <h1 className="font-fira-code sm:text-xl text-lg">
                 {title}
             </h1>

@@ -35,7 +35,7 @@ const Body = () => {
         <div className="px-5 flex-grow flex flex-col">
             <CodeEditor code={code} onChange={onCodeChange} editorLanguage={editorLanguage.EditorLanguage} editorTheme={editorTheme.Theme} placeholder="" />
 
-            <div className="flex-grow w-full pb-3 flex sm:flex-row flex-col-reverse items-center justify-center">
+            <div className="flex-1 w-full pb-3 flex sm:flex-row flex-col-reverse items-center justify-center">
                 <StdInput title="Standard Input" placeholder="Put your standard inputs here" value={stdInput} onChange={e => setStdInput(e.target.value)} />
 
                 <OutputConsole title="Output Console" output={consoleOutput} />

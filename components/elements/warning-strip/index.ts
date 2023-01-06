@@ -1,0 +1,1 @@
+export { default as WarningStrip } from "./warning-strip";
